@@ -1,5 +1,6 @@
 console.log("Starting...")
 
+/*
 function updateNestedAttribute(obj, path, value) {
     const keys = path.split('.'); // Split the path into keys
     let current = obj;
@@ -18,17 +19,7 @@ function updateNestedAttribute(obj, path, value) {
     // Update the final attribute
     current[keys[keys.length - 1]] = value;
 }
-
-// Example usage:
-const myObj = {
-    personalData: {
-
-    }
-};
-
-updateNestedAttribute(myObj, 'personalData.address.city', 'New York');
-console.log(myObj);
-
+*/
 
 function updateNestedAttribute(obj, path, value) {
     const keys = path.split('.');
@@ -61,7 +52,8 @@ const person = {
         { id: 2, city: "Los Angeles", country: "California" }
     ]
 };
-
+updateNestedAttribute(person, 'personalData.contact.email', 'JohnD@gmail.com');
+console.log(person);
 // Update the street name for the New York address (index 0)
 updateNestedAttribute(person, 'addresses.0.street', '5th Avenue');
 console.log(person);
